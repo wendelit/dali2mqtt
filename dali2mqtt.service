@@ -1,6 +1,7 @@
 [Unit]
 Description=dali2mqtt
-After=network.target
+After=network-online.target
+Wants=network-online.target
 
 [Service]
 ExecStart=/home/homeassistant/dali2mqtt/venv/bin/python3 dali-mqtt-daemon.py
